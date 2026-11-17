@@ -1,6 +1,6 @@
-# ShopCore API — E-commerce Java | Projeto 4/9
+# ShopCore API — E-commerce Java
 
-Backend REST educacional de e-commerce em **Java 21, Spring Boot 3.5.7, PostgreSQL, JPA, Flyway e Maven**. Foco em regras de negócio, persistência e testes para portfólio de estágio/Júnior.
+Backend REST educacional de e-commerce em **Java 21, Spring Boot 3.5.7, PostgreSQL, JPA, Flyway e Maven**. Foco em regras de negócio, persistência e testes para portfólio.
 
 ## Funcionalidades
 - Catálogo de produtos com SKU único, preço em `BigDecimal` e estoque.
@@ -61,8 +61,5 @@ Depois execute `POST /api/v1/carts/1/checkout` com corpo vazio.
 
 ### Atenção à consistência
 A transação de checkout reverte mudanças se falhar, mas `@Version` é usado para detectar concorrência entre atualizações de produto; o código não implementa bloqueio pessimista individual dos produtos. Para uma aplicação real, seriam necessários testes concorrentes e política explícita de retry.
-
-## Para entrevistas
-Explique `BigDecimal`, `@Transactional`, `@Version`, relacionamentos JPA, `orphanRemoval`, DTOs, validações, snapshots de preço, controle de estoque e limites da API.
 
 Projeto educacional para portfólio; não pronto para produção.
